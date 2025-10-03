@@ -5,6 +5,15 @@ app_description = "college admission work flow"
 app_email = "santhoshkumar@gmail.com"
 app_license = "mit"
 
+
+
+doc_events = {
+    "Student Applicant": {
+        "before_insert": "sandy.api.web_form.set_owner_for_guest"
+    }
+}
+
+
 # Apps
 # ------------------
 

@@ -1,0 +1,308 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:APT-{program}-{######}",
+ "creation": "2025-10-01 17:38:04.502824",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details_section",
+  "first_name",
+  "last_name",
+  "date_of_birth",
+  "gender",
+  "phone",
+  "email",
+  "column_break_eoms",
+  "academic_year",
+  "application_date",
+  "department",
+  "program",
+  "paid",
+  "status",
+  "section_break_ijno",
+  "city",
+  "state",
+  "nationality",
+  "postal_code",
+  "column_break_mikg",
+  "address",
+  "section_break_dmup",
+  "guardian_name",
+  "guardian_phone",
+  "previous_school",
+  "column_break_fwnc",
+  "marks_obtained",
+  "_12th_certificate",
+  "ug_certificate"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_eoms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "default": "Today",
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department List",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "department.program",
+   "fieldname": "program",
+   "fieldtype": "Data",
+   "label": "Program",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Applied\nPayment Pending\nShortlisted\nSelected\nWait List\nRejected",
+   "permlevel": 1,
+   "placeholder": "Select Status"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Permanent Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian / Parent Name"
+  },
+  {
+   "fieldname": "guardian_phone",
+   "fieldtype": "Data",
+   "label": "Guardian Phone"
+  },
+  {
+   "fieldname": "previous_school",
+   "fieldtype": "Data",
+   "label": "Previous School / College"
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Data",
+   "label": "Marks / GPA",
+   "reqd": 1
+  },
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "section_break_ijno",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_mikg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dmup",
+   "fieldtype": "Section Break",
+   "label": "Guardian Details"
+  },
+  {
+   "fieldname": "column_break_fwnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.program === 'PG'",
+   "fieldname": "ug_certificate",
+   "fieldtype": "Attach Image",
+   "label": "UG Certificate",
+   "mandatory_depends_on": "eval:doc.program === 'PG'"
+  },
+  {
+   "fieldname": "_12th_certificate",
+   "fieldtype": "Attach Image",
+   "label": "12'th Certificate"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-03 16:27:23.671173",
+ "modified_by": "Administrator",
+ "module": "Admission Base",
+ "name": "Student Applicant",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
+  },
+  {
+   "read": 1,
+   "role": "Student Applicant",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admission Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admission Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Applied"
+  },
+  {
+   "color": "Yellow",
+   "title": "Payment Pending"
+  },
+  {
+   "color": "Pink",
+   "title": "Shortlisted"
+  },
+  {
+   "color": "Green",
+   "title": "Selected"
+  },
+  {
+   "color": "Purple",
+   "title": "Wait List"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ]
+}
