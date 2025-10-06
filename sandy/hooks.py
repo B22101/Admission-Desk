@@ -13,7 +13,7 @@ doc_events = {
     }
 }
 
-
+fixtures = ["Department List","Program List"]
 # Apps
 # ------------------
 

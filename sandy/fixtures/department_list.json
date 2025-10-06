@@ -1,0 +1,42 @@
+[
+ {
+  "department_name": "BSc (Computer Science)",
+  "docstatus": 0,
+  "doctype": "Department List",
+  "modified": "2025-10-06 18:21:52.646932",
+  "name": "BSc (Computer Science)",
+  "program": "UG"
+ },
+ {
+  "department_name": "BSc (Mathematics)",
+  "docstatus": 0,
+  "doctype": "Department List",
+  "modified": "2025-10-06 18:22:16.668833",
+  "name": "BSc (Mathematics)",
+  "program": "UG"
+ },
+ {
+  "department_name": "BA (Economics)",
+  "docstatus": 0,
+  "doctype": "Department List",
+  "modified": "2025-10-06 18:22:33.874453",
+  "name": "BA (Economics)",
+  "program": "UG"
+ },
+ {
+  "department_name": "MSc (Mathematics)",
+  "docstatus": 0,
+  "doctype": "Department List",
+  "modified": "2025-10-06 18:22:49.533107",
+  "name": "MSc (Mathematics)",
+  "program": "PG"
+ },
+ {
+  "department_name": "MBA (Master of Business Administration)",
+  "docstatus": 0,
+  "doctype": "Department List",
+  "modified": "2025-10-06 18:23:04.345921",
+  "name": "MBA (Master of Business Administration)",
+  "program": "PG"
+ }
+]
